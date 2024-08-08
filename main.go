@@ -3,9 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var angkapositif uint8 = 89
-	var angkanegatif = -1243423644
+	var pesan string = "Haii"
 
-	fmt.Printf("bilangan positif: %d\n", angkapositif)
-	fmt.Printf("bilangan negatif: %d\n", angkanegatif)
+	fmt.Printf("message: %s \n", pesan)
 }
