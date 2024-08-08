@@ -3,15 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	//Ini Pesan yang muncul
-	fmt.Println("Hello World!!")
+	var namadepan string ="Raffa"
 
-	//Ini pesan yang tidak muncul
-	//fmt.Println("Hello World!!")
+	var namabelakang string ="Raihan"
 
-	/* Ini Pesan yang muncul*/
-	fmt.Println("Hello World!!")
-
-	/* Ini pesan yang tidak muncul*/
-	/* fmt.Println("Hello World!!")*/
+	fmt.Printf("Hallo %s %s!\n " , namadepan , namabelakang)
 }
