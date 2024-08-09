@@ -1,27 +1,22 @@
 package main
 
-import (
-    "fmt"
-    "math/rand"
-    "time"
-)
+import "fmt"
+import "math"
 
-var acakan = rand.New(rand.NewSource(time.Now().Unix()))
+func calculate(d float64) (float64, float64) {
+    // hitung luas
+    var area = math.Pi * math.Pow(d / 2, 2)
+    // hitung keliling
+    var circumference = math.Pi * d
 
-func main() {
-    var isiAcak int
-
-    isiAcak = randomWithRange(2, 10)
-    fmt.Println("Angka acak:", isiAcak)
-
-    isiAcak = randomWithRange(2, 10)
-    fmt.Println("Angka acak:", isiAcak)
-
-    isiAcak = randomWithRange(2, 10)
-    fmt.Println("Angka acak:", isiAcak)
+    // kembalikan 2 nilai
+    return area, circumference
 }
 
-func randomWithRange(min, max int) int {
-    var value = acakan.Int()%(max-min+1) + min
-    return value
+func main() {
+    var diameter float64 = 15
+    var area, circumference = calculate(diameter)
+
+    fmt.Printf("luas lingkaran\t\t: %.2f \n", area)
+    fmt.Printf("keliling lingkaran\t: %.2f \n", circumference)
 }
