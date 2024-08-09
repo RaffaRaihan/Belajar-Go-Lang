@@ -1,22 +1,16 @@
 package main
 
 import "fmt"
-import "math"
+import "strings"
 
-func calculate(d float64) (float64, float64) {
-    // hitung luas
-    var area = math.Pi * math.Pow(d / 2, 2)
-    // hitung keliling
-    var circumference = math.Pi * d
+func yourHobbies(name string, hobbies ...string) {
+    var hobbiesAsString = strings.Join(hobbies, ", ")
 
-    // kembalikan 2 nilai
-    return area, circumference
+    fmt.Printf("Hello, my name is: %s\n", name)
+    fmt.Printf("My hobbies are: %s\n", hobbiesAsString)
 }
 
 func main() {
-    var diameter float64 = 15
-    var area, circumference = calculate(diameter)
-
-    fmt.Printf("luas lingkaran\t\t: %.2f \n", area)
-    fmt.Printf("keliling lingkaran\t: %.2f \n", circumference)
+    var hobbies = []string{"sleeping", "eating"}
+    yourHobbies("wick", hobbies...)
 }
