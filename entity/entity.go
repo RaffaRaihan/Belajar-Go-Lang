@@ -15,8 +15,8 @@ type Users struct {
 	Gender    string `gorm:"column:gender"`
 	Foto      string `gorm:"column:foto"`
 	Address   string `gorm:"column:address"`
-	RolesRole string `gorm:"column:role"`
-	Roles     Roles  `gorm:"foreignKey:RolesRole"`
+	RolesIdRole int `gorm:"column:role"`
+	Roles     Roles  `gorm:"foreignKey:RolesIdRole"`
 }
 
 type Ac struct {

@@ -6,6 +6,8 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql" // import dialect mysql untuk gorm
 )
 
+var DB *gorm.DB
+
 // Fungsi ConnectDB mengembalikan koneksi database GORM yang baru
 func ConnectDB() (*gorm.DB, error) {
 	// Pengaturan koneksi database
